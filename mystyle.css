@@ -1,0 +1,175 @@
+* {
+  padding: 0px;
+  margin: 0px;
+  box-sizing: border-box;
+}
+body{
+  color:white;
+  background-image:url('green.jpg');
+  background-size:100%;
+  overflow: hidden;
+  
+    cursor:pointer;
+
+}
+.two{
+  display: flex;
+  padding-top: 30px;
+  font-size: 1.2rem;
+  cursor: pointer;
+  
+}
+.two .one{
+  background-color: red;
+  margin-right: 5px;
+  border:1px solid white; 
+  border-radius:2px;
+  width: 20px;
+  height: 20px;
+}
+.darkclass{
+  background-color: rgb(27, 26, 26);
+  color:white;
+}
+
+.time{
+  
+  position:absolute;
+  right:100px;
+  padding:10px;
+  font-size:2rem;
+  
+  border-radius: 10px;
+}
+.newgame{
+  background-color: red;
+  color:white;
+  padding: 10px;
+  border-radius: 10px;
+  
+  display:block;
+  font-size: 1.3rem;
+  position:absolute;
+  top:70%;
+  left:50%;
+  transform:translate(-50%,-50%)
+}
+.newgame:hover{
+  background-color: rgb(210, 8, 8);
+}
+.winner {
+  display: none;
+  position: absolute;
+  top: 30%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  
+  width: 90%;
+  height: 100px;
+}
+
+.container{
+  display:flex;
+  justify-content: center;
+ 
+}
+.wrapper {
+  
+  width: 100vw;
+  margin-top: 50px;
+  display: none;
+  grid-template-columns: auto auto auto;
+  row-gap: 10px;
+  justify-content: space-around;
+  padding: 15px;
+  animation :flow 1s linear;
+  position:absolute;
+}
+
+@keyframes flow{
+  from{top:600px}
+  to{top:50px}
+}
+.box {
+  
+  width: 100px;
+  height: 130px;
+  background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSAOyjw138AsOPlqProV-GPLqQPwSMIpvOmpPMdUs3ZR60aeGMOosECrwzGnWdAjO8QSDE&usqp=CAU");
+  background-size: 100px;
+  border-radius: 10px;
+  overflow: hidden;
+  border:1px solid white;
+}
+
+.logo img{
+  width: 200px;
+}
+.menu img{
+  width: 40px;
+}
+.box img {
+  border-radius: 5px;
+  width: 100px;
+}
+.navbar {
+  
+  display: flex;
+  justify-content: space-between;
+  padding: 15px;
+ 
+  position: sticky;
+  top: 0px;
+
+  z-index: 1;
+}
+.logo {
+  font-size: 2rem;
+  font-weight: 500;
+}
+/* pc laptop  */
+@media screen and (min-width: 450px) {
+  .wrapper {
+    max-width: 100%;
+    grid-template-columns: auto auto auto auto;
+  }
+  .newgame{
+    top:80%;
+  }
+  .container {
+    display: flex;
+    justify-content: center;
+    top:20%;
+  }
+  .box img {
+    width: 100%;
+  }
+  .box {
+    width: 100px;
+    height: 100px;
+    background-size: 100px;
+  }
+  .winner{
+    top:80px;
+    width: 300px;
+  }
+}
+@media screen and (min-width: 800px) {
+  .menu {
+    display: none;
+  }
+  .wrapper {
+    max-width: 70%;
+  }
+  .box img {
+    width: 100%;
+  }
+  .box {
+    width: 100px;
+    height: 100px;
+    background-size: 100px;
+    
+  }
+  .winner{
+    width: 500px;
+  }
+}
